@@ -1,5 +1,5 @@
 {
-  "name": "@freestuffbot/typings",
+  "name": "@FreeStuffBot/typings",
   "version": "0.1",
   "description": "FreeStuff Typings",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
     "prepub": "npm run lint && npm run build && npm run test && npm pub"
   },
   "publishConfig": {
-    "@freestuffbot:registry": "https://npm.pkg.github.com"
+    "@FreeStuffBot:registry": "https://npm.pkg.github.com"
   },
   "author": "FreeStuff Contributors",
   "devDependencies": {
