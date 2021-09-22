@@ -36,8 +36,11 @@ export interface ScrapeableGameInfo {
         steam_subids?: string;
     };
 }
-/** An object with all the data needed to generate all types of announcements */
-export interface GameInfo extends ScrapeableGameInfo {
+/**
+ * An object with all the data needed to generate all types of announcements
+ * For the API post-proccessed version @see GameInfo
+ */
+export interface DatabaseGameInfo extends ScrapeableGameInfo {
     org_url: string;
     store: Store;
     flags: GameFlags;
@@ -48,21 +51,16 @@ export interface GameInfo extends ScrapeableGameInfo {
     };
     proxy_url?: string;
 }
-/** Analytical data */
+/**
+ * Some analytical data
+ */
 export interface GameAnalytics {
     discord: {
-        /** Number of servers it got announced in */
         reach: number;
-        /** Clicks in total */
-        clicks: number;
     };
 }
-/** This is the object that gets stored long term for the following uses:
- * - Tell the proxy where to redirect the links to
- * - Contain analytics data
- * - Queue up for approval process
- *
- * @database
+/**
+ * This is the object that gets stored long term
  */
 export interface GameData {
     /** a unique number to identify the game - used by the proxy */
@@ -75,8 +73,83 @@ export interface GameData {
     responsible: string;
     /** Current status of the game */
     status: GameApprovalStatus;
-    /** Analytical data */
-    analytics: GameAnalytics;
     /** Info about the game */
-    info: GameInfo;
+    info: DatabaseGameInfo;
+    /** Analytics */
+    analytics: GameAnalytics;
+}
+/**
+ * The object containing all localized information about an announcement
+ */
+export interface LocalizedGameInfo {
+    lang_name: string;
+    lang_name_en: string;
+    lang_flag_emoji: string;
+    platform: string;
+    claim_long: string;
+    claim_short: string;
+    free: string;
+    header: string;
+    footer: string;
+    org_price_eur: string;
+    org_price_usd: string;
+    until: string;
+    until_alt: string;
+    flags: string[];
+}
+/**
+ * This is the post-proccessed version of the GameInfo object that gets served out by the API.
+ * For the data present in the database @see DatabaseGameInfo
+ */
+export interface GameInfo {
+    id: number;
+    urls: {
+        default: string;
+        browser: string;
+        client?: string;
+        org: string;
+    };
+    title: string;
+    org_price: {
+        euro: number;
+        usd: number;
+        gbp: number;
+        brl: number;
+        bgn: number;
+        pln: number;
+        huf: number;
+        btc: number;
+    };
+    price: {
+        euro: number;
+        usd: number;
+        gbp: number;
+        brl: number;
+        bgn: number;
+        pln: number;
+        huf: number;
+        btc: number;
+    };
+    thumbnail: {
+        org: string;
+        blank: string;
+        full: string;
+        tags: string;
+    };
+    kind: ProductKind;
+    tags: string[];
+    description: string;
+    rating?: number;
+    notice?: string;
+    until: Date;
+    store: Store;
+    flags: GameFlags;
+    type: AnnouncementType;
+    store_meta: {
+        steam_subids: string;
+    };
+    localized?: {
+        'en-US': LocalizedGameInfo;
+        [key: string]: LocalizedGameInfo;
+    };
 }

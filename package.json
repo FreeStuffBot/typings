@@ -1,6 +1,5 @@
 {
-  "name": "@maanex/fsbtypings",
-  "dep-name": "@freestuffbot/typings",
+  "name": "@freestuffbot/typings",
   "version": "0.1.1",
   "description": "FreeStuff Typings",
   "main": "dist/index.js",
@@ -15,7 +14,7 @@
   "publishConfig": {
     "@freestuffbot:registry": "https://npm.pkg.github.com"
   },
-  "author": "FreeStuff Contributors",
+  "author": "FreeStuff Team",
   "devDependencies": {
     "@types/node": "^16.3.2",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
