@@ -31,6 +31,6 @@ export type Platform = {
   bit: number
   name: string
   description: string
-  // emoji: Emojis
+  moderated: boolean
   default: boolean
 }
