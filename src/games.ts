@@ -21,6 +21,8 @@ export type Store
   | 'apple'
   | 'google'
   | 'switch'
+  | 'ps'
+  | 'xbox'
   | 'other'
 
 export type GameApprovalStatus

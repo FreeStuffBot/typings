@@ -4,7 +4,7 @@ export declare enum GameFlag {
 }
 /** @see GameFlag */
 export declare type GameFlags = number;
-export declare type Store = 'steam' | 'epic' | 'humble' | 'gog' | 'origin' | 'uplay' | 'twitch' | 'itch' | 'discord' | 'apple' | 'google' | 'switch' | 'other';
+export declare type Store = 'steam' | 'epic' | 'humble' | 'gog' | 'origin' | 'uplay' | 'twitch' | 'itch' | 'discord' | 'apple' | 'google' | 'switch' | 'ps' | 'xbox' | 'other';
 export declare type GameApprovalStatus = 'pending' | 'declined' | 'approved';
 export declare type AnnouncementType = 'free' | 'weekend' | 'discount' | 'ad' | 'unknown';
 export declare type ProductKind = 'game' | 'dlc' | 'software' | 'art' | 'ost' | 'book' | 'other';
