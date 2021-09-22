@@ -1,4 +1,4 @@
-import { Long } from 'mongodb'
+import { Long } from 'bson'
 import { Currency, Platform, PriceClass, Theme } from './structs'
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@freestuffbot/typings",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "FreeStuff Typings",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,10 +19,12 @@
     "@types/node": "^16.3.2",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
-    "@types/mongodb": "^3.6.20",
     "eslint": "^7.30.0",
     "reflect-metadata": "^0.1.13",
     "eslint-config-maanex": "^1.1.2",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/bson": "^4.2.0"
   }
 }
