@@ -1,9 +1,8 @@
 {
   "name": "@freestuffbot/typings",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "FreeStuff Typings",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .ts --ignore-path .gitignore src/**/*.ts",
