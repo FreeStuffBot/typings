@@ -1,9 +1,12 @@
+import { ThemeBuilder } from "./common"
+
 
 export type Theme = {
   id: number
   name: string
   description: string
   emoji: string
+  builder: ThemeBuilder
   toggleCurrencies: boolean
   usesEmbeds: boolean
 }
