@@ -130,7 +130,7 @@ export interface GameData {
 /**
  * The object containing all localized information about an announcement
  */
- export interface LocalizedGameInfo {
+export interface LocalizedGameInfo {
   lang_name: string,
   lang_name_en: string,
   lang_flag_emoji: string,
