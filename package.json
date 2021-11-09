@@ -1,6 +1,6 @@
 {
   "name": "@freestuffbot/typings",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "FreeStuff Typings",
   "main": "index.js",
   "types": "types/index.d.ts",
